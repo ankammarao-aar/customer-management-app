@@ -1,0 +1,67 @@
+# Customers Routes
+# ----------------
+POST http://localhost:3000/api/customers/
+Content-Type: application/json
+
+{
+    "id": 4,
+    "firstName": "Lakshmi",
+    "lastName": "N",
+    "phoneNumber": "9977884123"
+}
+
+###
+Get http://localhost:3000/api/customers/
+
+###
+Get http://localhost:3000/api/customers/3/
+
+###
+# Updated Api 
+PUT http://localhost:3000/api/customers/2/
+Content-Type: application/json
+
+{
+    "firstName": "Sai",
+    "lastName": "N",
+    "phoneNumber": "7799884123"
+}
+
+###
+
+DELETE  http://localhost:3000/api/customers/2/
+###
+
+
+# Addresses Routes
+# ----------------
+Get http://localhost:3000/api/customers/2/addresses/
+###
+
+POST http://localhost:3000/api/customers/2/addresses
+Content-Type: application/json
+
+{
+    "id": 5,
+    "customerId": 2,
+    "addressDetails": "Eluru",
+    "city": "West Godavari",
+    "state": "AP",
+    "pinCode": "123456"
+}
+###
+
+PUT http://localhost:3000/api/addresses/5/
+Content-Type: application/json
+
+{
+    "customerId": 2,
+    "addressDetails": "Eluru",
+    "city": "West Godavari",
+    "state": "AP",
+    "pinCode": "123456"
+}
+###
+
+DELETE http://localhost:3000/api/addresses/3/
+###
